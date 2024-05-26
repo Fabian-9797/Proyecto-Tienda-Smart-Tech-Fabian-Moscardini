@@ -71,5 +71,3 @@
     <script type="text/javascript" src="mov.js"></script>
 </body>
 </html>
-
-<!----------->

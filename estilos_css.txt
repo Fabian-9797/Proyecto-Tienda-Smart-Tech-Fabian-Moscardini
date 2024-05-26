@@ -1,0 +1,233 @@
+.fondo{
+    background:orange;
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+    .fondo {background: rgb(198, 193, 184);}    
+}
+
+@media only screen and (min-width: 700px) {
+    .fondo {background: rgb(246, 215, 158);}
+}
+
+@media only screen and (min-width: 1200px) {
+    .fondo {background: orange;}
+}
+
+header {
+    background: linear-gradient(blue, pink);
+    position: fixed;
+    padding-top: 5px;
+    margin-top: -17px;
+    text-align : center;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Lucida Handwriting", "Times New Roman", "Arial";
+    text-align : center;
+    font-size : 70px ;
+    border : ridge;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    animation-name: mod-color;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 1300px) {
+    .ajuste {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+.bienvenida {
+    margin-top: 30px;
+}
+
+@keyframes mod-color {
+    0% {background: green;}
+    50% {background: greenyellow;}
+    100% {background: brown;}
+}
+
+.boton:hover {
+    color: rgb(88, 87, 87);
+}
+
+.boton {
+    color: rgb(234, 231, 231);
+    background-color: green;
+    border: 1px solid green;
+}
+
+.texto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pos {
+    float: right;
+    margin-left: 620px;
+}
+
+.productos {
+    float: right;
+}
+
+.fot{
+    width: 282.2px;
+    height: 192px;
+}
+
+button {
+    border-radius: 80px;
+    background-color: rgb(145, 209, 178);
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.dat {
+    background-color: rgb(211, 210, 210);
+    width: 350px;
+}
+
+.cons {
+    background-color: rgb(211, 210, 210);
+    margin-top: 15px;
+}
+
+footer {
+    text-align : center
+}
+
+.contenedor {
+    background: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.historia {
+    font-family: CrimsonPro;
+}
+
+table {
+    margin: 20px;
+    width: 600px;
+    height: 300px;
+    border: 1;
+    margin-left: 490px;
+}
+
+.efect::before {content: "💵"; }
+.efect::after {content: "💵"; }
+
+.cred::before {content: "💳"; }
+.cred::after {content: "💳"; }
+
+.deb::before {content: "💳"; }
+.deb::after {content: "💳"; }
+
+.m_pago::before {content: "🏦"; }
+.m_pago::after {content: "🏦"; }
+
+.cur {
+    cursor: pointer;
+    border: 10px outset rgb(167, 165, 165);
+    width: 282.2px;
+    height: 344.6px;
+}
+
+.plata {
+    font-weight: bold;
+}
+
+.pags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pag_icono {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.fot_uno {
+    background-color: gray;
+    margin-bottom: -17px;
+}
+
+fieldset {
+    text-align: center;
+}
+
+input {
+    margin: 3px;
+}
+
+.ar_editar {
+    text-align: center;
+}
+
+.h_tit {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.cont-general {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-sizing: border-box;
+}
+
+/*.cont {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #2196F3;
+}
+
+.cont-item {
+    background-color: rgb(227, 225, 228);
+    border: 1px solid black;
+    padding: 30px;
+    font-size: 35px;
+    text-align: center;
+} */
+
+.contenedor_dos {
+    background: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.precio_b {
+    margin-top: 35px;
+}
+
+.precio_c {
+    margin-top: 17px;
+}

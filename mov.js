@@ -118,3 +118,105 @@ function dinero_tot_celular_cinco () {
   document.getElementById("Cuota_cinco_celu").innerHTML = "Precio total: $ 175.999";
 }
 
+function historia_Mensaje () {
+  document.getElementById("hist_bot").innerHTML = "Innovación / Accesibilidad / Excelencia / Compromiso / Inclusión";
+}
+
+let nombre = document.getElementById("n_nombre");
+let apellido = document.getElementById("n_apellido");
+let docu = document.getElementById("dni");
+let nombreRegex = /^[^\d]*$/;
+let noPoner = /[#$%&*()?/]/;
+let correo = document.getElementById("correo");
+let numTel = document.getElementById("tel");
+let numCel = document.getElementById("cel");
+let contador = 0;
+
+function validacionDatos (correcto) {
+  let genCirculo = document.querySelector('input[name="genero"]:checked');
+  let semana = document.getElementById("fechas");
+  let reloj = document.getElementById("time");
+  if (nombre.value === "") {
+      alert("Por favor ingrese su nombre");
+      nombre.focus();
+      event.preventDefault();
+      return false;
+  } else if (nombre.value.length < 2) {
+      alert("Por favor ingrese un nombre completo");
+      nombre.focus();
+      event.preventDefault();
+      return false;
+  } else if (!nombreRegex.test(nombre.value)) {
+      alert("No introduzca números en el nombre");
+      nombre.focus();
+      event.preventDefault();
+      return false;
+  } else if (noPoner.test(nombre.value)) {
+      alert("No introduzca caracteres como #, ?, / en el nombre");
+      nombre.focus();
+      event.preventDefault();
+      return false;
+  } else if (apellido.value === "") {
+      alert("Por favor ingrese su apellido");
+      apellido.focus();
+      event.preventDefault();
+    return false;
+  } else if (apellido.value.length < 2) {
+      alert("Por favor ingrese su apellido completo");
+      apellido.focus();
+      event.preventDefault();
+    return false; 
+  } else if (!nombreRegex.test(apellido.value)) {
+      alert("No introduzca números en el apellido");
+      apellido.focus();
+      event.preventDefault();
+      return false; 
+  } else if (noPoner.test(apellido.value)) {
+      alert("No introduzca caracteres como #, ?, / en el apellido");
+      apellido.focus();
+      event.preventDefault();
+      return false;
+  } else if (docu.value === "") {
+      alert("Por favor introduzca su DNI");
+      docu.focus();
+      event.preventDefault();
+      return false;
+  } else if (docu.value.length != 8) {
+      alert("Su número de documento debe tener 8 dígitos");
+      docu.focus();
+      event.preventDefault();
+      return false;
+  } else if (!genCirculo) {
+      alert("Por favor seleccione un género");
+      event.preventDefault();
+      return false;
+  } else if (correo.value === "") {
+      alert("Por favor debe introducir un correo electrónico");
+      correo.focus();
+      event.preventDefault();
+      return false;
+  } else if (numTel.value === "") {
+      alert("Por favor complete su número de teléfono");
+      numTel.focus();
+      event.preventDefault();
+      return false;
+  } else if (numCel.value === "") {
+      alert("Por favor complete su número de celular");
+      numCel.focus();
+      event.preventDefault();
+      return false;
+  } else if (semana.value === 0 || semana.value === "") {
+      alert("Por favor seleccione un día de la semana para contactarlo");
+      semana.focus();
+      event.preventDefault();
+      return false;
+  } else if (reloj.value === 0 || reloj.value === "") {
+      alert("Por favor seleccione un horario para contactarlo");
+      reloj.focus();
+      event.preventDefault();
+      return false;
+  }
+  return true;
+}
+
+document.getElementById("forma").addEventListener("submit", validacionDatos);
